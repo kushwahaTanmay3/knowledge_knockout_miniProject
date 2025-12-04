@@ -30,9 +30,9 @@ const questions=[
         question:"Calculate 150 divided 3.",
         answer:[
             {text:"45",correct:false},
-            {text:"30",correct:true},
+            {text:"30",correct:false},
             {text:"15",correct:false},
-            {text:"50",correct:false},
+            {text:"50",correct:true},
         ]
     }
 ];
@@ -117,3 +117,4 @@ function showScore(){
 }
 
 startQuiz();
+
