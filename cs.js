@@ -27,12 +27,12 @@ const questions=[
         ]
     },
     {
-        question:"Which is the smallest continent in the world?",
+        question:"Which is the first programing language the world?",
         answer:[
-            {text:"Asia",correct:false},
-            {text:"Australia",correct:true},
-            {text:"Arctic",correct:false},
-            {text:"Africa",correct:false},
+            {text:"C++",correct:false},
+            {text:"C",correct:true},
+            {text:"Java",correct:false},
+            {text:"JS",correct:false},
         ]
     }
 ];
@@ -117,3 +117,4 @@ function showScore(){
 }
 
 startQuiz();
+
