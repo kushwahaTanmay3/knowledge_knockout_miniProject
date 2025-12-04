@@ -14,7 +14,7 @@ const questions=[
             {text:"Triangulum Galaxy",correct:false},
             {text:"Andromeda Galaxy",correct:false},
             {text:"The Milky Way",correct:true},
-            {text:"",correct:false},
+            {text:"Sandway Galaxy",correct:false},
         ]
     },
     {
@@ -117,3 +117,4 @@ function showScore(){
 }
 
 startQuiz();
+
