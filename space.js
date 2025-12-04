@@ -30,9 +30,9 @@ const questions=[
         question:"The Great Red Spot on Jupiter is actually a massive:",
         answer:[
             {text:"Valcano",correct:false},
-            {text:"Ocean",correct:true},
+            {text:"Ocean",correct:false},
             {text:"Crater",correct:false},
-            {text:"Storm",correct:false},
+            {text:"Storm",correct:true},
         ]
     }
 ];
@@ -117,4 +117,5 @@ function showScore(){
 }
 
 startQuiz();
+
 
