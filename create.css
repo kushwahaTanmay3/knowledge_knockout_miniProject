@@ -1,0 +1,248 @@
+body{
+    background-color:aliceblue;
+    /* Added responsive settings to body for better centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.box{
+    text-align: center;
+    width: 45vw; /* This will be adjusted in media queries */
+    border:2px solid black;
+    margin:100px auto ; /* Reset margin for mobile */
+    border-radius:10px;
+    background-color:whitesmoke;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    border:none;
+    padding: 10px; /* Added internal padding */
+    transition: width 0.3s;
+}
+h1{
+    color:#187BCD;
+    padding-top:20px;
+}
+.quiz{
+    font-weight: 600;
+}
+.quiz input{
+    margin-left: 10px;
+    margin-bottom:10px;
+    width: 25vw; /* This will be adjusted in media queries */
+    padding: 8px; /* Added padding for touch targets */
+}
+.ques p{
+    font-weight:600;
+}
+.ques input{
+    width:38vw; /* This will be adjusted in media queries */
+    padding:30px 40px 30px; /* This padding is very large and will be reduced */
+    margin:10px;
+}
+.ans{
+    display:flex;
+    flex-direction: column;
+    row-gap:10px;
+}
+.i {
+    /* Changed from fixed 600px to percentage */
+    width: 70%; 
+    
+    /* Added max-width so it doesn't get too wide on huge screens */
+    max-width: 500px; 
+    
+    /* Better padding for typing */
+    padding: 10px; 
+    
+    /* Spacing between the options */
+    margin: 5px 0; 
+    
+    /* Ensures padding doesn't make the element wider than the width set */
+    box-sizing: border-box; 
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.add ,.cr{
+    margin:8px;
+    padding:10px 15px; /* Increased padding for better touch target */
+    background-color:red;
+    border-radius: 4px;
+    border:none;
+    color:white;
+    cursor: pointer;
+}
+/* --- Keep your existing CSS for the Form here --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2f5;
+    /* Removed the display:flex and centering from the first body block to keep the second one. */
+    /* The second body block's centering rules will be applied: */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* ... (Your existing .box, .quiz, .ques styles) ... */
+
+/* --- NEW CSS for the Playing Section --- */
+.app {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: none; /* Hidden by default until "Create" is clicked */
+    text-align: center;
+}
+
+.app h1 {
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+.quiz-q {
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+.btn.correct {
+    background: #9aeabc;
+    color: black;
+    border-color: #9aeabc;
+}
+
+.btn.incorrect {
+    background: #ff9393;
+    color: black;
+    border-color: #ff9393;
+}
+
+#next-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none; /* Hidden initially */
+}
+
+
+/* =========================================
+   MEDIA QUERIES (Responsive Design)
+   ========================================= */
+
+/* 1. Tablet / Small Desktop (Max width: 992px) */
+@media screen and (max-width: 992px) {
+    /* Quiz Creation Box */
+    .box {
+        width: 60vw; /* Make the box a bit wider */
+        margin: 50px auto; /* Adjust top margin */
+    }
+
+    /* Input fields for Quiz title/category */
+    .quiz input {
+        width: 35vw; 
+    }
+
+    /* Input field for the main Question text */
+    .ques input {
+        width: 50vw; 
+        padding: 20px 30px; /* Reduced padding */
+    }
+}
+
+/* 2. Mobile Devices (Max width: 600px) */
+@media screen and (max-width: 600px) {
+    /* --- General Layout --- */
+    body {
+        /* Allow content to scroll if it exceeds screen height */
+        min-height: auto; 
+        padding: 20px 0; /* Add top/bottom padding for breathing room */
+        align-items: flex-start; /* Start content from the top */
+    }
+    
+    /* --- Quiz Creation Box (.box) --- */
+    .box {
+        width: 95%; /* Make the box full-width on mobile */
+        margin: 20px auto; /* Reduced margin */
+        box-shadow: none; /* Removed heavy shadow for cleaner mobile look */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Slightly smaller title */
+    }
+
+    /* --- Inputs (General) --- */
+    /* Input fields for Quiz title/category */
+    .quiz input {
+        width: 80%; /* Almost full width */
+        margin: 5px 0; /* Center input nicely */
+        margin-left: 0;
+    }
+
+    /* Input field for the main Question text */
+    .ques input {
+        width: 90%; /* Almost full width */
+        padding: 15px 20px; /* Drastically reduced padding to save vertical space */
+    }
+    
+    /* Input fields for the individual answers (.i) */
+    .i {
+        width: 90%; /* On phones, make it fill almost the whole box */
+        padding: 12px; /* Slightly larger touch area */
+        font-size: 16px; /* Prevents zooming on iPhone when clicking */
+    }
+
+    /* --- Buttons --- */
+    .add, .cr {
+        display: block; /* Stack buttons vertically */
+        width: 90%;
+        margin: 10px auto; /* Center stacked buttons */
+        padding: 12px;
+    }
+    
+    /* --- Quiz Playing Area (.app) --- */
+    .app {
+        width: 95%; /* Match the full width of the form box */
+        padding: 20px; /* Reduced padding */
+    }
+
+    .app h1 {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+}

@@ -1,0 +1,126 @@
+/* =========================================
+   DEFAULT STYLES (Desktop / Large Screens)
+   ========================================= */
+* {
+    font-family: 'Poppins', arial;
+}
+body {
+    background-color: aliceblue;
+    /* Added to center the app vertically on large screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.app {
+    background-color: #fff;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    margin: 100px auto 0px; /* Reduced to 0px because of flex centering on body */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+    transition: all 0.3s ease; /* For smooth resizing */
+}
+.app h1 {
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px; /* Reduced in mobile media query */
+}
+.quiz {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: left; /* Options should be left-aligned for better reading */
+}
+.quiz h2 {
+    font-size: 18px;
+    margin: 10px 0 20px 0; /* Adjusted margin */
+    color: #222;
+    font-weight: 600; /* Adjusted font weight for visibility */
+}
+.btn {
+    padding: 10px;
+    margin: 10px 0;
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: left; /* Ensure text inside button aligns left */
+}
+.btn:hover {
+    background: #222;
+    color: #fff;
+}
+#next-btn {
+    margin-top: 20px; /* Increased margin */
+    padding: 10px 20px; /* Increased padding for better touch target */
+    background-color: #001e4d;
+    color: #fff;
+    width: 150px;
+    border: none; /* Added border:none to match button styling */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block; /* Make it a block element to center with margin: auto */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================
+   MEDIA QUERIES (Responsive Adjustments)
+   ========================================= */
+
+/* 1. Tablet Devices (Max width: 768px) */
+@media screen and (max-width: 768px) {
+    .app {
+        /* Reduce top margin to bring content higher */
+        margin-top: 50px; 
+    }
+}
+
+/* 2. Mobile Devices (Max width: 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        /* Remove vertical centering on mobile to allow content to start at top */
+        align-items: flex-start; 
+        min-height: auto; 
+    }
+    
+    .app {
+        width: 100%; /* Take up the full width */
+        max-width: none;
+        padding: 20px; /* Reduced internal padding */
+        margin: 0; /* Remove top/bottom margin */
+        border-radius: 0; /* Remove rounded corners for full-width look */
+        box-shadow: none; /* Remove heavy shadow */
+    }
+
+    .app h1 {
+        font-size: 20px; /* Smaller main title */
+        padding-bottom: 20px;
+    }
+    
+    .quiz h2 {
+        font-size: 16px; /* Smaller question text */
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        padding: 12px; /* Increased touch area for options */
+        font-size: 15px;
+    }
+
+    #next-btn {
+        width: 130px; /* Smaller next button */
+        padding: 8px 15px;
+        margin-top: 15px;
+    }
+}
